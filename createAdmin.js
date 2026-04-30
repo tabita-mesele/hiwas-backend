@@ -2,9 +2,15 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
 // connect DB (use your correct DB name)
-mongoose.connect("mongodb://127.0.0.1:27017/hiwas")
-  .then(() => console.log("DB connected"))
+// mongoose.connect("mongodb://127.0.0.1:27017/hiwas")
+//   .then(() => console.log("DB connected"))
+//   .catch(err => console.log(err));
+
+
+mongoose.connect("mongodb://mongo:vUhRZOVGiZpZxgwmlOdUFlDmiUMUsdAq@switchback.proxy.rlwy.net:18788/hiwas")
+  .then(() => console.log("DB connected from remote serevr"))
   .catch(err => console.log(err));
+
 
 // Admin model (simple)
 const AdminSchema = new mongoose.Schema({
