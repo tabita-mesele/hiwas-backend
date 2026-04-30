@@ -55,7 +55,7 @@ app.use("/api/newsletters", newsletterRoutes);
 const authRoutes = require("./routes/authRoutes");
 app.use("/api/auth", authRoutes);
 
-mongoose.connect("mongodb://mongo:vUhRZOVGiZpZxgwmlOdUFlDmiUMUsdAq@switchback.proxy.rlwy.net:18788/hiwas?authSource=admin")
+mongoose.connect("mongodb://mongo:vUhRZOVGiZpZxgwmlOdUFlDmiUMUsdAq@switchback.proxy.rlwy.net:18788/hiwasDB?authSource=admin")
   .then(() => console.log("MongoDB connected from remote db"))
   .catch(err => console.log(err));
 

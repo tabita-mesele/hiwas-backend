@@ -7,7 +7,7 @@ const bcrypt = require("bcryptjs");
 //   .catch(err => console.log(err));
 
 
-mongoose.connect("mongodb://mongo:vUhRZOVGiZpZxgwmlOdUFlDmiUMUsdAq@switchback.proxy.rlwy.net:18788/hiwas")
+mongoose.connect("mongodb://mongo:vUhRZOVGiZpZxgwmlOdUFlDmiUMUsdAq@switchback.proxy.rlwy.net:18788/hiwasDB")
   .then(() => console.log("DB connected from remote serevr"))
   .catch(err => console.log(err));
 
