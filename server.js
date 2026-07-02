@@ -9,9 +9,12 @@ const app = express();
    ✅ CORS FIX (IMPORTANT)
 ========================= */
 app.use(cors({
-  origin: "https://hiwasnewspp.netlify.app",
+  origin: [
+    "https://hiwasnewspp.netlify.app",
+    "http://localhost:3000"
+  ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
 }));
 
 // handle preflight requests
