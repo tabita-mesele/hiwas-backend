@@ -55,9 +55,16 @@ app.use("/api/newsletters", newsletterRoutes);
 const authRoutes = require("./routes/authRoutes");
 app.use("/api/auth", authRoutes);
 
-mongoose.connect("mongodb://mongo:vUhRZOVGiZpZxgwmlOdUFlDmiUMUsdAq@switchback.proxy.rlwy.net:18788/hiwasDB?authSource=admin")
-  .then(() => console.log("MongoDB connected from remote db"))
-  .catch(err => console.log(err));
+// mongoose.connect("mongodb://mongo:vUhRZOVGiZpZxgwmlOdUFlDmiUMUsdAq@switchback.proxy.rlwy.net:18788/hiwasDB?authSource=admin")
+//   .then(() => console.log("MongoDB connected from remote db"))
+//   .catch(err => console.log(err));
+
+mongoose.connect(
+  "mongodb://mongo:lfOWtCahrmIxPBzkdLXgoRJUtZpPlfhP@hayabusa.proxy.rlwy.net:12559/hiwasDB?authSource=admin"
+)
+.then(() => console.log("✅ Connected to Railway MongoDB"))
+.catch(err => console.error("❌ Connection Error:", err));
+
 
 // Test route
 app.get("/test", (req, res) => {

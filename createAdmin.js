@@ -7,9 +7,15 @@ const bcrypt = require("bcryptjs");
 //   .catch(err => console.log(err));
 
 
-mongoose.connect("mongodb://mongo:vUhRZOVGiZpZxgwmlOdUFlDmiUMUsdAq@switchback.proxy.rlwy.net:18788/hiwasDB")
-  .then(() => console.log("DB connected from remote serevr"))
-  .catch(err => console.log(err));
+// mongoose.connect("mongodb://mongo:vUhRZOVGiZpZxgwmlOdUFlDmiUMUsdAq@switchback.proxy.rlwy.net:18788/hiwasDB")
+//   .then(() => console.log("DB connected from remote serevr"))
+//   .catch(err => console.log(err));
+
+mongoose.connect(
+  "mongodb://mongo:lfOWtCahrmIxPBzkdLXgoRJUtZpPlfhP@hayabusa.proxy.rlwy.net:12559/hiwasDB?authSource=admin"
+)
+.then(() => console.log("✅ Connected to Railway MongoDB"))
+.catch(err => console.error("❌ Connection Error:", err));
 
 
 // Admin model (simple)
